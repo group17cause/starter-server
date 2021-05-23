@@ -38,6 +38,7 @@ router.get('/:id', ash(async(req, res) => {
 
 /** ADD NEW STUDENT */
 router.post('/', function(req, res, next) {
+  req.body.imageUrl = "https://image.shutterstock.com/image-vector/male-avatar-profile-picture-use-600w-193292036.jpg";
   Student.create(req.body)
     .then(createdStudent => res.status(200).json(createdStudent))
     .catch(err => next(err));
