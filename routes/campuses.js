@@ -17,5 +17,20 @@ router.get('/:id', ash(async(req, res) => {
   res.status(200).json(campus);
 }));
 
+/** Delete Campus by ID */
+router.delete('/:id', ash(async(req, res) => {
+  try {
+    await Campus.destroy({
+      where : {
+        id : req.params.id
+      }
+    });
+    res.status(200).json(`Succesfully Deleted Campus with id: ${req.params.id}`)
+  } catch(error) {
+    console.log(error);
+  }
+}));
+
+
 // Export our router, so that it can be imported to construct our apiRouter;
 module.exports = router;
