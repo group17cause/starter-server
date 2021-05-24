@@ -5,13 +5,13 @@ const seedDB = async () => {
 		name: "Hunter College",
 		description: "This is a school in NYC.",
     address : "68th Street Lexington Avenue",
-    imageUrl : "https://image.shutterstock.com/image-vector/male-avatar-profile-picture-use-600w-193292036.jpg"
+    imageUrl : "https://static.mediawire.in//images/default-corporate-image.jpg"
 	});
 	const dummy_campus2 = await Campus.create({
 		name: "Harvard",
     address : "123 East 5th Street",
 		description: "This is a school in MA.",
-    imageUrl : "https://image.shutterstock.com/image-vector/male-avatar-profile-picture-use-600w-193292036.jpg"
+    imageUrl : "https://static.mediawire.in//images/default-corporate-image.jpg"
 	});
 
 	const dummy_student = await Student.create({

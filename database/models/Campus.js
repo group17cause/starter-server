@@ -17,7 +17,8 @@ const Campus = db.define("campus", {
   },
 
   address : {
-    type : Sequelize.STRING
+    type : Sequelize.STRING,
+    allowNull : false
   }
 
 });

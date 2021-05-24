@@ -31,6 +31,12 @@ router.delete('/:id', ash(async(req, res) => {
   }
 }));
 
-
+/** ADD NEW CAMPUS */
+router.post('/', function(req, res, next) {
+  req.body.imageUrl = "https://static.mediawire.in//images/default-corporate-image.jpg";
+  Campus.create(req.body)
+    .then(createdCampus => res.status(200).json(createdCampus))
+    .catch(err => next(err));
+});
 // Export our router, so that it can be imported to construct our apiRouter;
 module.exports = router;
